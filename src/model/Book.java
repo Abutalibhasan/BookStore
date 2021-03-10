@@ -62,6 +62,13 @@ public class Book {
 		this.cost = cost;
 	}
 	/**
+	 * @param isbn
+	 */
+	public Book(int isbn) {
+		super();
+		this.isbn = isbn;
+	}
+	/**
 	 * @return the isbn
 	 */
 	public int getIsbn() {

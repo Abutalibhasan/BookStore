@@ -1,8 +1,12 @@
 import java.time.LocalDate;
 import java.util.List;
 import controller.LocalDateAttributeConverte;
+import controller.OrderHelper;
+import controller.StudentHelper;
 import controller.BookHelper;
 import model.Book;
+import model.Order;
+import model.Student;
 
 /**
  * Abutalib Hasan - amhasan
@@ -16,13 +20,21 @@ public class StartProgram {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Book b1 = new Book(1,"Web dev","CiS",LocalDate.now(),65);
-		BookHelper bh = new BookHelper();
-		bh.insertBook(b1);
-		List<Book> allBooks = bh.showAllBooks();
-		for(Book l : allBooks) {
-			System.out.println(l.toString());
+
+		Student st = new Student(9999);
+		Book bk = new Book(19822,"Web", "Web Dev", LocalDate.now(),56);
+		
+		Order or = new Order(bk,st);
+		OrderHelper oh = new OrderHelper();
+		oh.setOrder(or);
+		List<Order> allOrders = oh.showAllOrders();
+		for(Order os: allOrders) {
+			System.out.println(os.toString());
 		}
+		
+
+		
 	}
+	
 
 }
